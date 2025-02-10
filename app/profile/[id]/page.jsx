@@ -1,12 +1,12 @@
 "use client";
 
-import { useSearchParams } from "next/navigation";
+import { useParams } from "next/navigation";
 import { useState, useEffect } from "react";
 import Profile from "@components/Profile";
 
 const ViewProfile = () => {
-  const searchParams = useSearchParams();
-  const userId = searchParams.get("id");
+  const params = useParams();
+  const userId = params.id;
   const [posts, setPosts] = useState([]);
   const [username, setUsername] = useState("");
 

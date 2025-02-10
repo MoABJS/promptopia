@@ -49,7 +49,7 @@ const Feed = () => {
     if (session?.user?.id === id) {
       return router.push("/profile");
     }
-    router.push(`/view-profile?id=${id}`);
+    router.push(`/profile/${id}`);
   };
 
   useEffect(() => {
